@@ -4,9 +4,10 @@ const dotenv = require('dotenv');
 const authRoutes = require('./routes/auth');
 const cors = require('cors'); // Import cors
 const friendRoutes = require('./routes/friend');
+const app = express();
 app.use(cors()); // Enable CORS
 dotenv.config();
-const app = express();
+
 const PORT = process.env.PORT || 5000;
 
 // Middleware
