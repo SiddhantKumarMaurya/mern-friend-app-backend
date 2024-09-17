@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const router = express.Router();
 const cors = require('cors'); // Import cors
-app.use(cors()); // Enable CORS
+router.use(cors()); // Enable CORS
 
 // Register
 router.post('/register', async (req, res) => {

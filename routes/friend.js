@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const cors = require('cors'); // Import cors
 
-app.use(cors()); // Enable CORS
+router.use(cors()); // Enable CORS
 
 // Search for users
 router.get('/search', auth, async (req, res) => {
