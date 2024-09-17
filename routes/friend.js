@@ -5,12 +5,8 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const cors = require('cors'); // Import cors
 
-const corsOptions = {
-    origin: 'http://example.com', // Replace with your allowed origin(s)
-    methods: ['GET', 'POST'], // Specify allowed methods
-    allowedHeaders: ['Content-Type', 'Authorization'] // Specify allowed headers
-};
-router.use(cors(corsOptions));
+
+router.use(cors());
 
 
 // Search for users
