@@ -3,8 +3,13 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const router = express.Router();
-const cors = require('cors'); // Import cors
-router.use(cors()); // Enable CORS
+const corsOptions = {
+    origin: 'http://example.com', // Replace with your allowed origin
+    methods: ['GET', 'POST'], // Specify allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'] // Specify allowed headers
+};
+router.use(cors(corsOptions));
+
 
 // Register
 router.post('/register', async (req, res) => {
